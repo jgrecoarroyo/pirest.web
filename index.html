@@ -149,7 +149,7 @@
                 </p>
                 <div class="bs-callout bs-callout-primary">
                   <h4>How to use πrest</h4>
-                    <p>&nbsp;&nbsp;&nbsp;1. Check weather your analog or digital signals are giving the correct values in real time!
+                    <p>&nbsp;&nbsp;&nbsp;1. Check wether your analog or digital signals are giving the correct values in real time!
                     <br>&nbsp;&nbsp;&nbsp;2. Stream the correct verified data using simple REST API calls.
                     <br>&nbsp;&nbsp;&nbsp;3. Enjoy prototyping! :)
                   </p>
@@ -163,7 +163,7 @@
                 <br>
                 <p>Next run the node.js server, to start the REST API server with the GPIOs:</p>
                 <pre>node gpioapp/rpi-server-gpio/myapi.js</pre>
-                <p>Once that is up and running you can already try the visual debuggin tool by launching at <code>http://your_raspberryPi_ip:3000</code> your web browser.</p>
+                <p>Once that is up and running you can already try the visual debugging tool by launching at <code>http://your_raspberryPi_ip:3000</code> your web browser.</p>
                 <br>
                 <p>Finally, in order to see the ADCPi shield channels, run the python server to expose those values running the following command:</p>
                 <pre>sudo python ADCPi/pyServer.py</pre>
@@ -193,14 +193,14 @@
   <span class="json-pre">...</span>
 ]</pre>
                 <br>
-                <p>When a gpio number is given, for example <kbd>4</kbd> i.e. <code>http://MyRPiIP:3000/gpios/4</code> a whole list of values will be returned in JSON format.</p>
+                <p>When a gpio number is given, for example <kbd>4</kbd> i.e. <code>http://MyRPiIP:3000/gpios/4</code> a just that value will be returned in JSON format.</p>
                 <pre >{
     <span class="json-pre">"pin":</span> <span class="json-post"> "7",</span>
     <span class="json-pre">"gpio":</span> <span class="json-post"> "4",</span>
     <span class="json-pre">"value":</span> <span class="json-post"> "1"</span>
 }</pre>
                 <h3>PINs</h3>
-                <p>In the same way as with GPIOs, you can call these by their pin numbers; either non specifiying pin number <code>http://MyRPiIP:3000/pins</code> or by specifying pin number <code>http://MyRPiIP:3000/api/pins/7</code></p>
+                <p>In the same way as with GPIOs, you can call these by their pin number <code>http://MyRPiIP:3000/api/pins/7</code>, or none specifiying the pin number <code>http://MyRPiIP:3000/pins</code> to get all values.</p>
                 <h3>ADCs</h3>
                 <div class="bs-callout bs-callout-warning">
                   <h4>ADCPi shield</h4>
@@ -223,7 +223,7 @@
     <span class="json-pre">"value":</span> <span class="json-post"> "0.0"</span>
   }
 ]</pre>
-                <p>Given a scpecific ADC number, one can get only that specific ADC channel. For example given ADC number <kbd>1</kbd> we call <code>http://MyRPiIP:3000/adcs/1</code> the following will be returned:</p>
+                <p>Or, given a scpecific ADC number, you can get only that specific ADC channel. For example given ADC number <kbd>1</kbd> we call <code>http://MyRPiIP:3000/adcs/1</code> the following will be returned:</p>
                 <pre >{
     <span class="json-pre">"channel":</span> <span class="json-post">"1",</span>
     <span class="json-pre">"value":</span> <span class="json-post"> "3.11346"</span>
