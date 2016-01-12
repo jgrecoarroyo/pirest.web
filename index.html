@@ -94,7 +94,29 @@
                 <!-- <div id="pirestmove_hype_container" style="margin:auto;position:relative;width:40%;overflow:hidden;" aria-live="polite">
               		<script type="text/javascript" charset="utf-8" src="js/pirestmove.js?96115"></script>
               	</div> -->
-                
+                <p>
+                  <span class="volt" from="5.0323" to="3.1234">-</span>
+                  <br>
+                  <span class="volt" from="10.1231" to="2.9473">-</span>
+                </p>
+
+                <script type="text/javascript">
+                  $( document ).ready(function() {
+                    $('.volt').each(function () {
+                      $(this).prop('counter',$(this).attr('from')).animate({
+                          counter: $(this).attr('to')
+                      }, {
+                          duration: 1000,
+                          easing: 'swing',
+                          step: function (now) {
+                              $(this).text((Math.round(now*100)/100).toFixed(4) + " V");
+                          }
+                      });
+                    });
+                  });
+
+                </script>
+
                 <p class="subtitle">Access the GPIOs and ADCs of your raspberry Pi via REST API<br> Debug with the Visual realtime interface your next IoT project!</p>
                 <a href="#features" class="btn btn-primary btn-xl page-scroll" style="width: 210px;">Find Out More</a>
             </div>
