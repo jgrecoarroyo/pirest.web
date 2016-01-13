@@ -89,44 +89,24 @@
             <div class="header-content-inner">
                 <h1 style="color:#fff;">πrest<span style="font-size:0.3em;color: rgba(255,255,255,0.5); margin-bottom: -50px;">beta</span></h1>
                 <br>
-                <!-- <p><img src="img/board.svg" alt="board" style="width:40%;" /></p> -->
-                <!--<p><object id="svg_object" style="width:45%;" data="img/board.svg" type="image/svg+xml"></object></p>-->
 
                 <p><object id="svg_shield" style="width:300px; position: absolute; left: 50%; margin-left: -150px; z-index: 100;" data="img/shield.svg" type="image/svg+xml"></object></p>
                 <p><object id="svg_rpi"    style="width:300px; position: absolute; left: 50%; margin-left: -150px; margin-top: -50px;" data="img/rpi.svg" type="image/svg+xml"></object></p>
-                <!-- <div id="pirestmove_hype_container" style="margin:auto;position:relative;width:40%;overflow:hidden;" aria-live="polite">
-              		<script type="text/javascript" charset="utf-8" src="js/pirestmove.js?96115"></script>
-              	</div> -->
 
                 <script>
-//                    var lastScrollTop = 0;
-//                    $("#mydiv").scroll(function (event) {
-//                        var st = $(this).scrollTop();
-//                        if (st > lastScrollTop) {
-//                            $('#myimg').animate({top: '-=10'}, 10);
-//                        } else {
-//                            $('#myimg').animate({top: '+=10'}, 10);
-//                        }
-//                        lastScrollTop = st;
-//                    });
-                    var img = document.getElementById("svg_shield");
+                    var shield = document.getElementById("svg_shield");
+                    var rpi = document.getElementById("svg_rpi");
                     window.onresize = function() {
                         var scrollTop	= document.body.scrollTop;
                         var bodyWidth	= parseInt(getComputedStyle(document.body).width, 10);
-                        img.style['left'] = bodyWidth*0.5 + scrollTop + "px"; //bodyHeight  - img.offsetHeight + "px" ;
+                        shield.style['left'] = bodyWidth*0.5 + scrollTop + "px"; // move shield if window is rescaled
+                        rpi.style['left']    = bodyWidth*0.5 + scrollTop + "px"; // move board if window is rescaled
                     }
                     window.onscroll = function() {
-                        var bodyHeight	= parseInt(getComputedStyle(document.body).height, 10);
                         var bodyWidth	= parseInt(getComputedStyle(document.body).width, 10);
-//                        var scrollLimit = bodyHeight - window.innerHeight;
                         var scrollTop	= document.body.scrollTop;
-//                        var scrollPCT	= (scrollTop / (scrollLimit/100)) / 100;
-                        var starting_left_shield = document.getElementById("svg_shield").style.left; //window.screen.width*0.4;
-                        img.style['left'] = bodyWidth*0.5 + scrollTop + "px"; //bodyHeight  - img.offsetHeight + "px" ;
-                        console.log(bodyHeight);
-                        console.log(scrollTop);
-                        console.log("left: " + img.style.left);
-                        console.log("mleft: " + img.style['margin-left']);
+                        shield.style['left'] = bodyWidth*0.5 + scrollTop + "px"; // moves right ;
+                        rpi.style['left']    = bodyWidth*0.5 - scrollTop + "px"; // moves left ;
                     }
                 </script>
 
