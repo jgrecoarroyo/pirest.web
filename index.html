@@ -97,16 +97,18 @@
                     var shield = document.getElementById("svg_shield");
                     var rpi = document.getElementById("svg_rpi");
                     window.onresize = function() {
-                        var scrollTop	= document.body.scrollTop;
                         var bodyWidth	= parseInt(getComputedStyle(document.body).width, 10);
+                        var scrollTop	= document.body.scrollTop;
                         shield.style['left'] = bodyWidth*0.5 + scrollTop + "px"; // move shield if window is rescaled
                         rpi.style['left']    = bodyWidth*0.5 + scrollTop + "px"; // move board if window is rescaled
                     }
                     window.onscroll = function() {
                         var bodyWidth	= parseInt(getComputedStyle(document.body).width, 10);
-                        var scrollTop	= document.body.scrollTop;
-                        shield.style['left'] = bodyWidth*0.5 + scrollTop + "px"; // moves right ;
-                        rpi.style['left']    = bodyWidth*0.5 - scrollTop + "px"; // moves left ;
+                        if(bodyWidth>768) {
+                            var scrollTop = document.body.scrollTop;
+                            shield.style['left'] = bodyWidth * 0.5 + scrollTop + "px"; // moves right ;
+                            rpi.style['left'] = bodyWidth * 0.5 - scrollTop + "px"; // moves left ;
+                        }
                     }
                 </script>
 
