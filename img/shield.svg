@@ -312,28 +312,28 @@
                             <rect id="Rectangle-1553-Copy-7" x="0" y="168" width="42" height="25"></rect>
                         </g>
                         <text id="1" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal">
-                            <tspan x="47.5" y="188.5" fill="#000000">1</tspan>
+                            <tspan x="47.5" y="188.5">1</tspan>
                         </text>
                         <text id="2" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal">
-                            <tspan x="47.5" y="162.5" fill="#000000">2</tspan>
+                            <tspan x="47.5" y="162.5">2</tspan>
                         </text>
                         <text id="3" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal">
-                            <tspan x="47.5" y="138.5" fill="#000000">3</tspan>
+                            <tspan x="47.5" y="138.5">3</tspan>
                         </text>
                         <text id="4" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal">
-                            <tspan x="47.5" y="116.5" fill="#000000">4</tspan>
+                            <tspan x="47.5" y="116.5">4</tspan>
                         </text>
                         <text id="5" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal">
-                            <tspan x="47.5" y="90.5" fill="#000000">5</tspan>
+                            <tspan x="47.5" y="90.5">5</tspan>
                         </text>
                         <text id="6" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal">
-                            <tspan x="47.5" y="66.5" fill="#000000">6</tspan>
+                            <tspan x="47.5" y="66.5">6</tspan>
                         </text>
                         <text id="7" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal">
-                            <tspan x="47.5" y="42.5" fill="#000000">7</tspan>
+                            <tspan x="47.5" y="42.5">7</tspan>
                         </text>
                         <text id="8" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal">
-                            <tspan x="47.5" y="18.5" fill="#000000">8</tspan>
+                            <tspan x="47.5" y="18.5">8</tspan>
                         </text>
                     </g>
                     <g id="Group-Copy-6" transform="translate(227.000000, 493.000000)" sketch:type="MSShapeGroup">
